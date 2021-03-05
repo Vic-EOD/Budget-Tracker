@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane fx:controller="App.SavingsController"
+            xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #545C52">
+            <padding>
+                <Insets left="10" top="10" right="10" bottom="10"/>
+            </padding>
+
+            <Label text="Budget Tracker" textFill="whitesmoke" textAlignment="CENTER"
+                   style="-fx-font-size: 20"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox spacing="10" alignment="TOP_CENTER" style="-fx-background-color: #8FBFE0">
+            <padding>
+                <Insets bottom="10" top="10" left="10"/>
+            </padding>
+
+
+            <Button text="Home" fx:id="homeButton" onAction="#onButtonClicked"/>
+            <Button fx:id="transactionButton" text="Transactions" onAction="#onButtonClicked"/>
+            <Button text="Charts" fx:id="chartsButton" onAction="#onButtonClicked"/>
+            <Button text="Savings" fx:id="savingsButton" onAction="#onButtonClicked"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="15" prefWidth="300">
+            <HBox spacing="10" alignment="TOP_CENTER">
+                <padding>
+                    <Insets bottom="10" top="10" left="10"/>
+                </padding>
+                <Label text="Savings" alignment="TOP_CENTER" style="-fx-font-size: 50 bold"/>
+            </HBox>
+
+            <VBox spacing="15">
+                <ListView fx:id="savingsList"/>
+                <HBox spacing="10">
+                    <Label text="Total Savings Amount: " style="-fx-font-size: 20 bold" />
+                    <Label fx:id="totalSavings" style="-fx-font-size: 20"/>
+                </HBox>
+            </VBox>
+        </VBox>
+
+    </center>
+</BorderPane>

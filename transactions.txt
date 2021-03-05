@@ -1,0 +1,36 @@
+-40.0	Utilities	Electricity	December 9, 2020
+-500.0	Transportation	Repairs	November 4, 2020
+50.0	Savings	Emergency Fund	December 14, 2020
+25.0	Savings	Other Savings	December 14, 2020
+-100.0	Personal	Cosmetics	December 14, 2020
+-65.0	Housing	HOA Fees	December 8, 2020
+-11.11	Food	Groceries	December 8, 2020
+-20.0	Food	Groceries	December 14, 2020
+-15.0	Food	Restaurants	December 14, 2020
+-30.0	Food	Groceries	November 4, 2020
+-15.0	Entertainment	Movies	December 12, 2020
+-30.0	Entertainment	Alcohol	December 12, 2020
+10.0	Deposit/Payment	Cash	December 11, 2020
+20.0	Deposit/Payment	Cash	December 11, 2020
+100.0	Deposit/Payment	Cash	December 14, 2020
+-75.0	Debt	Credit Cards	December 15, 2020
+-88.88	Clothing	Shoes	January 7, 2021
+-10.0	Clothing	Clothing	December 12, 2020
+-53.0	Clothing	Shoes	December 14, 2020
+-250.0	Housing	HOA Fees	December 15, 2020
+20.0	Deposit/Payment	Credit Card	December 15, 2020
+-500.0	Medical	Urgent Care	July 7, 2020
+-100.0	Food	Restaurants	February 14, 2020
+-50.0	Personal	Gym	November 25, 2020
+-150.0	Transportation	Registration	April 22, 2020
+650.0	Deposit/Payment	Cash	December 2, 2020
+-68.0	Food	Groceries	October 14, 2020
+-13.0	Food	Restaurants	November 11, 2020
+-221.0	Housing	Property Taxes	September 9, 2020
+25.0	Savings	Emergency Fund	May 13, 2020
+-15.0	Household	Laundry Supplies	August 19, 2020
+-20.0	Personal	Grooming	October 7, 2020
+-60.0	Utilities	Internet	June 10, 2020
+-75.0	Utilities	Phone	March 10, 2020
+-56.0	Clothing	Clothing	January 8, 2020
+-250.0	Housing	Repairs	June 10, 2020

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<BorderPane fx:controller="App.ChartsController"
+            xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <HBox spacing="10" prefHeight="45"  style="-fx-background-color: #545C52">
+            <padding>
+                <Insets left="10" top="10" right="10" bottom="10"/>
+            </padding>
+
+            <Label text="Budget Tracker" textFill="whitesmoke" textAlignment="CENTER"
+            style="-fx-font-size: 20"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox spacing="10" alignment="TOP_CENTER">
+            <padding>
+                <Insets bottom="10" top="10" left="10"/>
+            </padding>
+
+
+            <Button text="Home" fx:id="homeButton" onAction="#onButtonClicked"/>
+            <Button fx:id="transactionButton" text="Transactions" onAction="#onButtonClicked"/>
+            <Button text="Charts" fx:id="chartsButton" onAction="#onButtonClicked"/>
+            <Button text="Savings" fx:id="savingsButton" onAction="#onButtonClicked"/>
+        </VBox>
+    </left>
+    <center>
+        <HBox>
+            <PieChart fx:id="pieChart" HBox.hgrow="ALWAYS"/>
+            <VBox spacing="20" alignment="TOP_CENTER">
+                <Label text="Chart Settings">
+                    <font>
+                        <Font name="Times New Roman bold" size="16"/>
+                    </font>
+                </Label>
+                <fx:define>
+                    <ToggleGroup fx:id="rangeToggle"/>
+                    <ToggleGroup fx:id="rangeToggleCategory"/>
+                </fx:define>
+                <VBox spacing="10">
+                    <Label text="Set Timeframe of Expenses">
+                        <font>
+                            <Font name="Times New Roman bold"/>
+                        </font>
+                    </Label>
+                    <RadioButton text="This Month" toggleGroup="$rangeToggle"/>
+                    <RadioButton text="This Year" toggleGroup="$rangeToggle"/>
+                    <RadioButton text="All Expenses" toggleGroup="$rangeToggle"/>
+                    <Button fx:id="generateChartsButton" text="View Category Breakdown" onAction="#handleChartGeneration"/>
+                </VBox>
+
+
+
+                <VBox spacing="10">
+                    <Label text="Select a category to view spending by subcategory" wrapText="true">
+                        <font>
+                            <Font name="Times New Roman bold"/>
+                        </font>
+                    </Label>
+                    <VBox spacing="5">
+                        <Label text="Set Timeframe of Expenses">
+                            <font>
+                                <Font name="Times New Roman bold"/>
+                            </font>
+                        </Label>
+                        <RadioButton text="This Month" toggleGroup="$rangeToggleCategory"/>
+                        <RadioButton text="This Year" toggleGroup="$rangeToggleCategory"/>
+                        <RadioButton text="All Expenses" toggleGroup="$rangeToggleCategory"/>
+                    </VBox>
+                    <ChoiceBox fx:id="categoryField">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+
+                            </FXCollections>
+                        </items>
+                    </ChoiceBox>
+                    <Button fx:id="subCategoryChartButton" text="View SubCategory Breakdown" onAction="#handleSubCategoryChart"/>
+                </VBox>
+            </VBox>
+        </HBox>
+
+    </center>
+</BorderPane>

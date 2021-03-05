@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<BorderPane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" fx:controller="App.TransactionsController">
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #545C52">
+            <padding>
+                <Insets left="10" top="10" right="10" bottom="10"/>
+            </padding>
+
+            <Label text="Budget Tracker" textFill="whitesmoke" textAlignment="CENTER"
+                   style="-fx-font-size: 20"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-background-color: #8FBFE0">
+            <padding>
+                <Insets bottom="10" left="10" top="10" />
+            </padding>
+
+
+            <Button fx:id="homeButton" onAction="#onButtonClicked" text="Home" />
+            <Button fx:id="transactionButton" onAction="#onButtonClicked" text="Transactions" />
+            <Button fx:id="chartsButton" onAction="#onButtonClicked" text="Charts" />
+            <Button fx:id="savingsButton" onAction="#onButtonClicked" text="Savings" />
+        </VBox>
+    </left>
+    <center>
+        <HBox alignment="CENTER" spacing="10">
+            <VBox alignment="CENTER" spacing="10" style="-fx-padding: 10">
+                <TableView fx:id="transactionTable" prefHeight="600.0" prefWidth="600.0" onMouseClicked="#handleClickTransactionItem" />
+                <HBox spacing="10" alignment="BOTTOM_RIGHT">
+                    <Button fx:id="deleteTransactionButton" onAction="#handleDelete" text="Delete Transaction" />
+                    <Button fx:id="addTransactionButton" onAction="#showAddEditDialog" text="Add Transaction"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
